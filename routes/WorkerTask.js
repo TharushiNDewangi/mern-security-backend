@@ -5,7 +5,7 @@ const path = require('path');
 const { addWorkerTask } = require('../controller/WorkerTask');
 
 
-router.post('/addtext',requireSignin,workermiddleware,addWorkerTask);
+router.post('/addtext',requireSignin,adminmiddleware,addWorkerTask);
 
 
 

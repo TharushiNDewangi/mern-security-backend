@@ -11,7 +11,7 @@ exports.addWorkerTask = (req, res) => {
     title, date, text
   } = req.body;
 
-  console.log("ff"+req.body.title);
+  console.log("ff"+req.body);
 
 
   //res.status(200).json({file: req.files , body:req.body});
