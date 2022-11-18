@@ -46,10 +46,11 @@ exports.managermiddleware = (req, res, next) => {
     console.log(req.user.role);
     if(req.user.role !=='manager')
     {
+        console.log(res.data);
         return res.status(400).json({message:'user access denaied'})
     }
     next();
-   
+    
 }
 // exports.editormiddleware = (req, res, next) => {
     

@@ -42,4 +42,14 @@ exports.addManagerTask = (req, res) => {
       }
   }));
 };
+exports.getall=async(req,res)=>{
+  await ManagerTask.find({})
+  .then(data=>{
+     res.status(200).send({data:data});
+ }).catch(err=>{
+     res.status(500).send({error:err.massage})
+     console.log(err);
+ });
 
+         
+ };
